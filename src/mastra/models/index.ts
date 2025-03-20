@@ -16,7 +16,7 @@ export const openRouter = openai(openRouterClaudeThinkingModel);
 
 export const models = {
   google: {
-    gemini: google("gemini-1.5-flash"),
+    gemini: google("gemini-2.0-flash-001"),
     textEmbedding: google.textEmbeddingModel("text-embedding-004"),
   },
   openai: {
