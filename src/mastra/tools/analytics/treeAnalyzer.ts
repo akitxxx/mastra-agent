@@ -11,7 +11,7 @@ const execAsync = promisify(exec);
  * tree構造解析ツール
  * リポジトリのディレクトリ構造を解析し、依存関係も分析します
  */
-export const treeAnalyzerTool = createTool({
+const treeAnalyzerTool = createTool({
   id: "tree-analyzer",
   description:
     "treeコマンドを使ってリポジトリの構造を解析します。特定の拡張子でフィルタリングも可能です。",
@@ -242,3 +242,5 @@ function analyzeTreeJson(treeJson: any): {
     fileCount,
   };
 }
+
+export { treeAnalyzerTool };

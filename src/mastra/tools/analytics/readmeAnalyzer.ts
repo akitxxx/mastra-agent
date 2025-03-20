@@ -30,7 +30,7 @@ const miniAgent = new Agent({
  * README解析ツール
  * リポジトリのREADMEファイルを読み取り、構造化データを抽出します
  */
-export const readmeAnalyzerTool = createTool({
+const readmeAnalyzerTool = createTool({
   id: "readme-analyzer",
   description:
     "リポジトリのREADMEファイルを解析して重要な情報を構造化データとして抽出します",
@@ -199,3 +199,5 @@ JSON形式での回答のみ返してください：
     return defaultMetadata;
   }
 }
+
+export { readmeAnalyzerTool };

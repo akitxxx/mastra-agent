@@ -6,7 +6,7 @@ import path from "node:path";
 /**
  * チートシート保存操作の結果を表すスキーマ
  */
-export const saveCheatsheetOutputSchema = z
+const saveCheatsheetOutputSchema = z
   .object({
     success: z.boolean().describe("保存操作が成功したかどうか"),
     message: z.string().describe("操作結果の詳細メッセージ"),
@@ -21,7 +21,7 @@ export const saveCheatsheetOutputSchema = z
 /**
  * チートシートを保存するツール
  */
-export const saveCheatsheetTool = createTool({
+const saveCheatsheetTool = createTool({
   id: "save-cheatsheet",
   description: "生成されたチートシートをファイルに保存します",
   inputSchema: z.object({
@@ -89,3 +89,5 @@ export const saveCheatsheetTool = createTool({
     }
   },
 });
+
+export { saveCheatsheetTool };

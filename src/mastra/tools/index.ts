@@ -1,7 +1,7 @@
-export * from "./github/cloneRepository";
-export * from "./cheatsheet/saveCheatsheet";
-export * from "./analytics/tokeiAnalyzer";
-export * from "./analytics/treeAnalyzer";
-export * from "./analytics/readmeAnalyzer";
-export * from "./rag/fileProcessor";
-export * from "./rag/vectorQuery";
+export { cloneRepositoryTool } from "./github/cloneRepository";
+export { saveCheatsheetTool } from "./cheatsheet/saveCheatsheet";
+export { tokeiAnalyzerTool } from "./analytics/tokeiAnalyzer";
+export { treeAnalyzerTool } from "./analytics/treeAnalyzer";
+export { readmeAnalyzerTool } from "./analytics/readmeAnalyzer";
+export { fileProcessorTool } from "./rag/fileProcessor";
+export { vectorQueryTool } from "./rag/vectorQuery";

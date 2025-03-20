@@ -7,7 +7,7 @@ import { models } from "../../models";
 /**
  * ベクトルデータベースからクエリを実行するツール
  */
-export const vectorQueryTool = createTool({
+const vectorQueryTool = createTool({
   id: "vector-query",
   description:
     "ベクトルデータベースに対してクエリを実行し、関連するコード片を取得します",
@@ -98,3 +98,5 @@ export const vectorQueryTool = createTool({
     }
   },
 });
+
+export { vectorQueryTool };

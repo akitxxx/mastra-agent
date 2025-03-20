@@ -3,14 +3,14 @@ import { z } from "zod";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { MDocument } from "@mastra/rag";
-import { Embedding, embedMany } from "ai";
+import { type Embedding, embedMany } from "ai";
 import { LibSQLVector } from "@mastra/core/vector/libsql";
 import { models } from "../../models";
 
 /**
  * ファイルを処理してチャンキング、ベクトル化、保存を行うツール
  */
-export const fileProcessorTool = createTool({
+const fileProcessorTool = createTool({
   id: "file-processor",
   description: "ファイルを受け取り、チャンキングしてベクトルストアに保存します",
   inputSchema: z.object({
@@ -224,3 +224,5 @@ export const fileProcessorTool = createTool({
     }
   },
 });
+
+export { fileProcessorTool };

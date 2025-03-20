@@ -10,7 +10,7 @@ const execAsync = promisify(exec);
 /**
  * クローン操作の結果を表すスキーマ
  */
-export const cloneOutputSchema = z
+const cloneOutputSchema = z
   .object({
     success: z.boolean().describe("クローン操作が成功したかどうか"),
     message: z.string().describe("操作結果の詳細メッセージ"),
@@ -57,7 +57,7 @@ const inputSchema = z.object({
  * GitHub リポジトリをクローンするツール
  * LFS対応とサブモジュール処理も可能
  */
-export const cloneRepositoryTool = createTool({
+const cloneRepositoryTool = createTool({
   id: "clone-repository",
   description:
     "GitHub リポジトリをクローンして、コード解析やファイル処理を可能にします",
@@ -93,7 +93,7 @@ export const cloneRepositoryTool = createTool({
 
       // サブモジュールが必要な場合
       if (includeSubmodules) {
-        command += ` --recurse-submodules`;
+        command += " --recurse-submodules";
       }
 
       // ターゲットディレクトリを指定
@@ -142,3 +142,5 @@ export const cloneRepositoryTool = createTool({
     }
   },
 });
+
+export { cloneRepositoryTool };

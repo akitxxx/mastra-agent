@@ -9,7 +9,7 @@ const execAsync = promisify(exec);
  * tokei分析ツール
  * リポジトリの言語統計情報を収集し、コード複雑度や保守性も分析します
  */
-export const tokeiAnalyzerTool = createTool({
+const tokeiAnalyzerTool = createTool({
   id: "tokei-analyzer",
   description: "tokeiを使ってリポジトリの言語統計とコード複雑度を分析します",
   inputSchema: z.object({
@@ -164,3 +164,5 @@ export const tokeiAnalyzerTool = createTool({
     }
   },
 });
+
+export { tokeiAnalyzerTool };
