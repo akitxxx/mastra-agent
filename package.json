@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mastra dev",
-    "format": "biome format --write .",
+    "format": "biome format --write ./src",
     "lint": "biome lint .",
-    "check": "biome check --apply ."
+    "check": "biome check --write ./src"
   },
   "keywords": [],
   "author": "",
